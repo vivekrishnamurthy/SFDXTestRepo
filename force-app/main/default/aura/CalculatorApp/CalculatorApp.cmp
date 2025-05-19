@@ -1,0 +1,33 @@
+<aura:component>
+    <aura:attribute name="Input1" type="Integer" />
+    <aura:attribute name="Input2" type="Integer" />
+    <aura:attribute name="Output" type="Integer" />
+	<aura:attribute name="Opp" type="Opportunity" default="{ 'sobjectType': 'Opportunity',
+                                                                           'Name':'Test Opp for LWC'
+                                                                           }" />
+    <c:testSObjectPass obj="{!v.Opp}"/>
+    <lightning:input type="number" value="{!v.Input1}" required="true" label="Enter first value" />
+    <lightning:input type="number" value="{!v.Input2}" required="true" label="Enter second value" />
+
+    This is the output: {v.Output}
+    
+    <c:modalPopup aura:id="mylwc"/>
+
+    <lightning:Button value="Component Methods" label="Add" onclick="{!c.Addition}" />
+    <lightning:Button value="Component Methods" label="Add" onclick="{!c.Subtraction}" />
+    <lightning:Button value="Component Methods" label="Add" onclick="{!c.Division}" />
+    <lightning:Button value="Component Methods" label="Add" onclick="{!c.Multiplication}" />
+    
+    <lightning:accordion aura:id="accordion" allowMultipleSectionsOpen="true" >        
+    	<lightning:accordionSection name="abc" class="slds-size_2-of-5" label="accordion">
+            <p>This is the content area for section A.</p>
+            <p>This is the content area for section B.</p>
+            <lightning:button value = "ssd" class="slds-size_1-of-3" variant="neutral" label="Edit activity" title="Edit activity" /> 
+			<lightning:button value = "ssd" class="slds-size_1-of-3" variant="neutral" label="Edit activity" title="Edit activity" />               
+           <!-- <aura:set attribute="actions">
+        		<lightning:button value = "ssd" class="slds-size_1-of-3" variant="neutral" label="Edit activity" title="Edit activity" /> 
+				<lightning:button value = "ssd" class="slds-size_1-of-3" variant="neutral" label="Edit activity" title="Edit activity" />               
+          </aura:set> -->
+        </lightning:accordionSection>         
+    </lightning:accordion>    
+</aura:component>

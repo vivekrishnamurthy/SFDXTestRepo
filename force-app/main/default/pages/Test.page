@@ -1,0 +1,37 @@
+<!--<apex:page standardController="Accounts" recordSetVar="accs">
+   
+	<h1>Weclome {!$user.Firstname}</h1>
+    <br/>
+    
+    <apex:dataTable value="{!accs}" var="acc">>
+    	 <apex:column value="{!acc.name}"/>
+        
+    </apex:dataTable>
+	
+    <apex:pageblock>
+    	<apex:pageblocktable value="{!accs}" var="acc">
+        <apex:column headervalue="action">
+        	<apex:outputlink title="Details in a popup" onclick="return openpopup('{!acc.name}')">Details</apex:outputlink>    
+        </apex:column>    
+    	</apex:pageblocktable>
+    </apex:pageblock>
+</apex:page>	
+-->
+<apex:page controller="FindAccounts">
+    <apex:form >
+		<apex:inputText value="{!accname}"/>    	
+        <apex:commandButton value="Submit" action="{!searchacc}"/>
+        <br/>
+        <apex:outputText value="{!res}"/>
+        
+        <br/>
+        <br/>
+        <br/>
+        <apex:dataTable value="{!acclst}" var="a" styleClass="outBorder"> 
+            <apex:column title="Account Name"	>
+        	<apex:outputText >{!a.name}</apex:outputText>
+            </apex:column>
+        </apex:dataTable>
+        
+    </apex:form>
+</apex:page>

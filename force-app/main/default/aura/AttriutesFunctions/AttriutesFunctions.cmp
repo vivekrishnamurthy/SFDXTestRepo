@@ -1,0 +1,28 @@
+<aura:component access="global">
+    <aura:attribute name="name" type="string" default="XYZ" />
+    <aura:attribute name="colorArray" type="String[]" default="['red','green','blue']" access = "private" />
+    <aura:attribute name="colorList" type="List" default="['red','green','blue']" access = "private" />
+    <aura:attribute name="colorSet" type="Set" default="['red','green','blue']" access = "private" />
+    <aura:attribute name="selectedColor" type="String" />
+    <aura:attribute name="DisplayColor" type="String" />
+    <aura:attribute name="SecColor" type="String" />
+    
+    Weclome {!v.name}, Below colors are available for you. Please choose whatever you like.
+    <br/>
+    {!v.colorArray[0]}
+    <br/>
+    {!v.colorList[1]}
+    <br/>
+    {!v.colorSet[2]}    
+    
+    <lightning:input name="ChosenColor" label="Type a color" value="{!v.selectedColor}"/>
+    <lightning:button value="btnColor" label ="Type a color and Submit" onclick="{!c.chooseColor}" />
+    <br/>
+    <br/>
+    Thank you for choosing --> {!v.DisplayColor}
+    <br/><br/>
+    <lightning:input aura:id="SecondColor" label="Type another color" onchange="{!c.chooseSecondColor}"/>
+    This is your second choice --> {!v.SecColor}
+    
+    
+</aura:component>

@@ -1,0 +1,16 @@
+<template>
+    <div>
+        <lightning-button variant="brand" onclick={handleSave} label="Upload was clicked"></lightning-button>
+    </div>
+    <div>
+        <template if:true={btnClick}>
+            <li>Upload was clicked</li>
+            <lightning-datatable
+            key-field="key1" 
+            columns={columns}
+            >
+        </lightning-datatable>
+        </template>
+       
+     </div>   
+    </template>

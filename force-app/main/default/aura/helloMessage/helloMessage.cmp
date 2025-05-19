@@ -1,0 +1,9 @@
+<aura:component >
+	<aura:attribute name="message" type="String" default="This is the default msg"/>
+    <!-- <p>Hello! [ message goes here, soon ]</p> -->
+    <p>Hello! Vivek {!v.message}</p>
+     <!-- <lightning:input type = "toggle" name="yes/No" label = "yes/no" checked = "true"/>
+     <lightning:input type = "text" required = "true"/>
+    <lightning:input type = "button" label = "Submit"/> -->
+    <!--  <p>{!'Hello Sir'}</p> -->
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:component >
+	<aura:attribute name = "messages" type="string"
+                    default = "How are you?" />
+</aura:component>

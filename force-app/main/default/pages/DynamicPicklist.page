@@ -1,0 +1,7 @@
+<apex:page controller="TestSelectController" >
+    <apex:form >
+    	<apex:selectlist value="{!selectedYear}" size="1">
+            <apex:selectOptions value="{!years}"/>
+        </apex:selectlist>
+    </apex:form>
+</apex:page>

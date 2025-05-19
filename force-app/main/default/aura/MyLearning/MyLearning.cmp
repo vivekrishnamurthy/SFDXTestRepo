@@ -1,0 +1,22 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <div class="slds-p-around_small">
+        <p>This is a sample paragraph</p>
+        <div class="red">This is sample division</div>
+    	<h1>This is a sample header</h1>
+    </div>
+   <br></br>
+    <div class="slds-p-around_x-small">
+    	<p>This is a sample paragraph</p>
+    	<div>This is sample division</div>
+    	<h1>This is a sample header</h1>
+    </div>
+	<br></br>
+   <p class="slds-p-horizontal--small">
+        <p>This is a sample paragraph</p>
+    	<div>This is sample division</div>
+    	<h1>This is a sample header</h1>
+    </p>
+    
+    
+    
+</aura:component>

@@ -1,0 +1,166 @@
+<!-- <template>
+   
+         <template if:true={KPIdata}>
+      
+                     <article class="slds-card slds-card_boundary related_list_card_border_top forceRelatedListCardDesktop">
+                        <div class="related_list_themed_border_top"></div>
+                        <div class="slds-card__header slds-grid">
+                          <header class="slds-media slds-media--center slds-has-flexi-truncate">
+                            <div class="slds-media__body">
+                              <h2 class="slds-text-title_bold">
+                                <span
+                                  class="slds-card__header-title slds-truncate slds-m-right--xx-small"
+                                  title=""
+                                  >KPI Fields</span
+                                >
+                              </h2>
+                            </div>
+                          </header>
+                          <div class="slds-no-flex">
+                            <div class="actionsContainer"></div>
+                          </div>
+                        </div>
+                        <div if:true={KPIdata} class="slds-card__body">
+                          <div class="slds-table--header-fixed_container forceBaseListView forceRelatedListPreviewGrid tableHeaderTopBorder">
+                            <div class="slds-scrollable--y scrollbarHeight">
+                        <table
+                        class="forceRecordLayout slds-table slds-no-row-hover slds-table_cell-buffer slds-table_fixed-layout uiVirtualDataGrid--default uiVirtualDataGrid slds-table--header-fixed"
+                        >
+                        <thead>
+                                   
+                            <tr> 
+                                <th
+                                scope="col"
+                                  title="Category"
+                                  aria-label="Category"
+                                >
+                                  <div
+                                    class="slds-cell-fixed fixedCellHeight"
+                                    >
+                                    Field
+                                  </div>
+                                </th>
+                                                   
+                                <th
+                                scope="col"
+                                title="KPI"
+                                aria-label="KPI"
+                                >
+                                <div
+                                    class="slds-cell-fixed fixedCellHeight extraSpace"
+                                    >
+                                    Value
+                                </div>
+                                </th>
+                                      
+                           </tr>     
+                        </thead>
+                        <tfoot></tfoot>
+                        <tbody>
+                            <template iterator:it={KPIdata}>
+                                <tr key={it.value.sortOrder}>
+                                    <td>                    
+                                        <span class="uiOutputText" title={it.value.fieldLabel}>
+                                          {it.value.fieldLabel}</span
+                                        >
+                                    </td>
+                    
+                                    
+                                    
+                                    
+                                          
+                                </tr>
+                            </template>                         
+
+                            
+                        </tbody>
+                        
+                    </table>
+                </div>
+            </div>
+          </div>
+             </article>     
+                                             
+    </template>
+</template> 
+
+ <template>
+    <div if:true={obj} class="slds-card__body">
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Opportunity Name">Opportunity Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" title="Account Name">Account Name</div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <template iterator:it={obj}>  
+
+ <tr class="slds-hint-parent" key={it.value.SortOrder}>
+
+  <td data-label="Opportunity Name">
+    <div class="slds-truncate" title="Cloudhub">
+      {it.value.Type}</a>
+    </div>
+  </td>
+  <td data-label="Account Name">
+    <div class="slds-truncate" title="Cloudhub">
+      {it.value.ColumnName}</div>
+  </td>
+
+</tr>
+
+<tr class="slds-hint-parent" key={it.value.SortOrder}>
+
+  <td data-label="Opportunity Name">
+    <div class="slds-truncate" title="Cloudhub">
+      {it.value.Type}</a>
+    </div>
+  </td>
+  <td data-label="Account Name">
+    <div class="slds-truncate" title="Cloudhub">
+      {it.value.ColumnName}</div>
+  </td>
+
+</tr> 
+
+ <tr key={it.value.SortOrder}>
+                    <td>                    
+                        <span class="uiOutputText" title={it.value.SortOrder}>
+                          {it.value.SortOrder}</span
+                        >
+                    </td>
+    
+                    <td>                     
+                        <span class="uiOutputText" title={it.value.Type}>
+                            {it.value.Type}</span
+                        >
+                    </td>
+                    
+                    <td>                     
+                        <span class="uiOutputText" title={it.value.ColumnName}>
+                             {it.value.ColumnName}</span
+                        >
+                    </td>        
+                </tr> 
+</template> 
+
+
+
+</tbody>
+</table>
+</div>
+</template> -->
+<template>
+  <div class="slds-form-element slds-form-element_readonly">
+    <span class="slds-form-element__label">{label.lbl}</span>
+    <div class="slds-form-element__control">
+      <div class="slds-form-element__static">{label.lbl}</div>
+    </div>
+  </div>
+</template>

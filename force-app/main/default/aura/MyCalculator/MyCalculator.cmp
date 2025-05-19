@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:attribute name = "Input1" type="integer" access="public"/>
+    <aura:attribute name = "Input2" type="integer" access="public"/>
+    <aura:attribute name = "Result" type="integer" />
+    <div class="slds-p-around_small">
+    	<lightning:input type="number" name="input1" label="Enter a number" value="{!v.Input1}"></lightning:input>
+   	    <lightning:input type="number" name="input2" label="Enter a percentage" formatter="percent-fixed" value ="{!v.Input2}"></lightning:input>
+        
+        <br></br>
+    	<br></br>
+    
+        Number: {!v.Input1}
+        <br></br>
+        <br></br>
+        Percentage: {!v.Input2}
+        <br></br>
+        <br></br>
+        Result: {!mult(v.Input1,v.Input2)}
+        </div>
+		
+    	
+    
+</aura:component>

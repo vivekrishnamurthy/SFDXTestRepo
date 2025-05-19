@@ -1,0 +1,11 @@
+<aura:component >
+	<p>Book Name:
+        <lightning:input type="text" />
+    </p>
+    <p>Price:
+        <lightning:input type="currency" required="true"/>
+    </p>
+    <p>
+    	Owner:{!v.Books.CreatedById}
+    </p>
+</aura:component>

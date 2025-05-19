@@ -1,0 +1,23 @@
+<aura:component >
+    <aura:attribute name="item" type="String"/>
+    <p>Name:{!v.item.Name__c}</p>
+    <p>Price: 
+    	<lightning:formattedNumber value="{!v.item.Price__c}" style="currency"/>
+    </p>
+    <p>Quantity:
+    	<lightning:formattedNumber value="{!v.item.Quantity__c}" style="Number"/>
+    </p>
+     <p>
+       <!-- <lightning:input type="toggle"                            
+                         label="Packed?"                           
+                         name="Packed"                         
+                         checked="{!v.expense.Packed__c}" /> -->
+         <lightning:input type="toggle" name="Packed" label="Packed?" checked="true" aura:id="checkbox" onclick="{!c.EnableBtn}"/>                    
+     </p> 
+    <p>
+        <lightning:Button label="Packed!" onclick="{!c.packItem}" aura:id="btn"/>
+    </p>
+    <p>
+    	{!v.item}
+    </p>
+</aura:component>

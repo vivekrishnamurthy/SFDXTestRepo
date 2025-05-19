@@ -1,0 +1,127 @@
+<!-- <template>
+  <article
+    class="slds-card slds-card_boundary related_list_card_border_top forceRelatedListCardDesktop"
+  >
+    <div class="slds-p-top_none"></div>
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media--center slds-has-flexi-truncate">
+        <div class="slds-media__body">
+          <h2 class="slds-text-title_bold">
+            <span
+              class="slds-card__header-title slds-truncate slds-m-right--xx-small"
+              title=""
+              >{title}</span
+            >
+          </h2>
+        </div>
+      </header>
+      <div class="slds-no-flex">
+        <div class="actionsContainer"></div>
+      </div>
+    </div>
+    <div if:true={obj} class="slds-card__body">
+      <div
+        class="slds-table--header-fixed_container forceBaseListView forceRelatedListPreviewGrid tableHeaderTopBorder"
+      ></div>
+      <div class="slds-scrollable--y scrollbarHeight">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+          <thead>
+            <tr>
+              <th scope="col" title="Category" aria-label="Category">
+                <div class="slds-cell-fixed fixedCellHeight">
+                  {locallabel.label}
+                </div>
+              </th>
+
+              <th scope="col" title="KPI" aria-label="KPI">
+                <div class="slds-cell-fixed fixedCellHeight extraSpace">
+                  {label.lbl2}
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tfoot></tfoot>
+          <tbody>
+            <template iterator:it={obj}>
+              <tr class="slds-hint-parent" key={it.value.SortOrder}>
+                <td data-label="Opportunity Name">
+                  <div class="slds-truncate" title="Cloudhub">
+                    {it.value.Type}
+                  </div>
+                </td>
+                <td data-label="Account Name">
+                  <div class="slds-truncate" title="Cloudhub">
+                    {it.value.ColumnName}
+                  </div>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </article>
+</template> -->
+
+<template>
+  <article class="slds-card">
+    <div class="slds-card__header slds-grid">
+      <header class="slds-media slds-media_center slds-has-flexi-truncate">
+        <!-- <div class="slds-media__figure">
+          <span
+            class="slds-icon_container slds-icon-standard-account"
+            title="account"
+          >
+            <svg class="slds-icon slds-icon_small" aria-hidden="true">
+              <use
+                xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#account"
+              ></use>
+            </svg>
+            <span class="slds-assistive-text">account</span>
+          </span>
+        </div> -->
+        <div class="slds-media__body">
+          <h2 class="slds-card__header-title">
+            <a
+              href="javascript:void(0);"
+              class="slds-card__header-link slds-truncate"
+              title={title}
+            >
+              <span>{title}</span>
+            </a>
+          </h2>
+        </div>
+      </header>
+    </div>
+    <!-- <div class="slds-card__body">
+      <template iterator:it={obj}>
+        <div class="slds-truncate" title="Cloudhub" key={it.value.SortOrder}>
+          {it.value.Type}
+        </div>
+        <div class="slds-truncate" title="Cloudhub" key={it.value.SortOrder}>
+          {it.value.ColumnName}
+        </div> -->
+
+    <!-- <div class="slds-card__header slds-grid"> -->
+    <div class="slds-grid slds-gutters slds-wrap">
+      <template iterator:it={obj}>
+        <div
+          class="slds-p-left_small slds-size_1-of-2"
+          key={it.value.SortOrder}
+        >
+          {it.value.Type}
+        </div>
+        <div class="slds-p-vertical_medium" key={it.value.SortOrder}></div>
+        <div
+          class="slds-p-left_small slds-size_1-of-2"
+          key={it.value.SortOrder}
+        >
+          {it.value.ColumnName}
+        </div>
+      </template>
+    </div>
+
+    <!-- </template>
+    </div> -->
+  </article>
+</template>

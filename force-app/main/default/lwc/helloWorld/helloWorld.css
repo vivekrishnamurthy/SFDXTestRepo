@@ -1,0 +1,33 @@
+table.slds-table--header-fixed tbody tr:first-child td{ 
+    border-bottom: 1px solid rgb(221, 219, 218);
+}
+
+
+div.tableHeaderTopBorder{
+    border-top: 1px solid rgb(221, 219, 218);
+}
+
+div.scrollbarHeight{
+    height: 15rem;
+}
+
+div.fixedCellHeight{
+    top: 0.5rem;
+    min-height: 0rem;
+    
+}
+
+.forceRelatedListPreviewGrid.forceBaseListView thead th {
+    height: 0px;
+}
+
+div.extraSpace{
+margin-left: 1.3rem;
+}
+
+.forceBaseListView tbody td span{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    margin-left: 0.9rem;
+}

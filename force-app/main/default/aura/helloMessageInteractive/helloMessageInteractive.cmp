@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="msg" type="string"/>
+    <p>Message: {!v.msg}</p>
+    
+    <div>
+        <lightning:button aura:id = "btn" label = "you just clicked a button" onclick = "{!c.handleClick2}"/>
+    </div>
+</aura:component>
